@@ -1,0 +1,23 @@
+1. Simulate path planning strategies: (i) Random Planning (RAND), (ii) Distance-based Planning (NNF), and (iii) Density-based Planning (DF). This project is to implement two major operations: Clustering and Path Planning. Suppose there are 100 points of interest (POIs) that are non-uniformly distributed in a 1,000 x 1,000 (m2) network. The locations of POIs follow a scale-free property, where a group of POIs is located within a small area. A drone equipped with a sensor flies over the network and scans all POIs, in which a coverage radius of the sensor (r) is set to 100 (m), coverage range. In this project, a source code of scale-free will be provided to generate POIs.
+
+First, cluster POIs using a neighbor density-based clustering algorithm to efficiently cover all POIs. The basic idea is to group densely populated POIs in an early stage and remove the number of candidate POIs to cover quickly. Please see the technical paper.
+
+Second, the drone launches from the base, located left and bottom in the network (0, 0), and flies toward the center locations (scan points) of each coverage range to scan all POIs. In this project, path planning is to determine the sequence of visits on all scan points. (i) In RAND, the drone first flies toward any randomly selected scan point. Upon arrival, the drone flies toward another randomly selected scan point. The drone repeats the same procedure until visits all scan points. (ii) In NNF, the drone selects a scan point that is the closest located to the drone. Upon arrival, the drone selects another closest located scan point from the current scan point. The drone repeats the same procedure until visits all scan points. (iii) in DF, the drone selects the scan point that covers the most POIs. Upon arrival, the drone selects the scan point that covers the second most POIs. The drone repeats the same procedure until visits all scan points.
+
+For visualization, use a triangle and a solid line for the scan point and the drone path, respectively. For
+
+2. Input parameters
+
+• Path planning strategies: 0 for RAND, 1 for NNF, and 2 for DF
+
+3. Run the clustering algorithm and path planning strategies.
+
+• >> path(0) % Clustering and RAND
+• >> path(1) % Clustering and NNF
+• >> path(2) % Clustering and DF
+
+4. Measure the performance of each path planning strategy.
+
+• Total flying distance from the base, left and bottom of the network (0, 0)
+
+
