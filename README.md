@@ -1,4 +1,4 @@
-# pp-drone-mob
+# pp-strat
 I did this project as a part of my graduate course Aerial Computing.
 
 ## Acknowledgment
