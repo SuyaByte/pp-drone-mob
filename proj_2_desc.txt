@@ -1,3 +1,5 @@
+#PATH PLANNING STRATEGIES
+
 1. Simulate path planning strategies: (i) Random Planning (RAND), (ii) Distance-based Planning (NNF), and (iii) Density-based Planning (DF). This project is to implement two major operations: Clustering and Path Planning. Suppose there are 100 points of interest (POIs) that are non-uniformly distributed in a 1,000 x 1,000 (m2) network. The locations of POIs follow a scale-free property, where a group of POIs is located within a small area. A drone equipped with a sensor flies over the network and scans all POIs, in which a coverage radius of the sensor (r) is set to 100 (m), coverage range. In this project, a source code of scale-free will be provided to generate POIs.
 
 First, cluster POIs using a neighbor density-based clustering algorithm to efficiently cover all POIs. The basic idea is to group densely populated POIs in an early stage and remove the number of candidate POIs to cover quickly. Please see the technical paper.
